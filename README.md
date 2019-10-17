@@ -1,2 +1,2 @@
 # wiremind-kube-schemas
-Extra schemas to validate Wiremind CRDs
+Extra schemas to validate some CRDs used by Wiremind.
