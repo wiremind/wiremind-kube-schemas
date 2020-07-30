@@ -1,0 +1,92 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "apiVersion",
+    "kind",
+    "metadata",
+    "spec"
+  ],
+  "properties": {
+    "apiVersion": {
+      "$id": "#/properties/apiVersion",
+      "type": "string",
+      "title": "The Apiversion Schema",
+      "default": "",
+      "examples": [
+        "wiremind.fr/v1"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "kind": {
+      "$id": "#/properties/kind",
+      "type": "string",
+      "title": "The Kind Schema",
+      "default": "",
+      "examples": [
+        "ExpectedDeploymentScale"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "metadata": {
+      "$id": "#/properties/metadata",
+      "type": "object",
+      "title": "The Metadata Schema",
+      "required": [
+        "name",
+        "labels"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/properties/metadata/properties/name",
+          "type": "string",
+          "title": "The Name Schema",
+          "default": "",
+          "examples": [
+            "cayzn-live-production-celery-etl-normal"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "labels": {
+          "$id": "#/properties/metadata/properties/labels",
+          "type": "object",
+          "title": "The Labels Schema"
+        }
+      }
+    },
+    "spec": {
+      "$id": "#/properties/spec",
+      "type": "object",
+      "title": "The Spec Schema",
+      "required": [
+        "deploymentName",
+        "expectedScale"
+      ],
+      "properties": {
+        "deploymentName": {
+          "$id": "#/properties/spec/properties/deploymentName",
+          "type": "string",
+          "title": "The Deploymentname Schema",
+          "default": "",
+          "examples": [
+            "cayzn-live-production-celery-etl-normal"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "expectedScale": {
+          "$id": "#/properties/spec/properties/expectedScale",
+          "type": "integer",
+          "title": "The Expectedscale Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        }
+      }
+    }
+  }
+}
+
