@@ -22,7 +22,8 @@ if [ -z "$1" ]; then
   exit 84
 fi
 
-directory_name=`basename $1`
+directory_name=`readlink -f $1`
+directory_name=`realpath --relative-to=${PWD} ${directory_name}`
 extension='yaml'
 
 for filename in $directory_name/*.yaml; do
