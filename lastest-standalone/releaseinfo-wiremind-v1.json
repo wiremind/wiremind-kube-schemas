@@ -1,0 +1,52 @@
+{
+    "apiVersion": "apiextensions.k8s.io/v1",
+    "kind": "CustomResourceDefinition",
+    "metadata": {
+        "creationTimestamp": null,
+        "name": "releaseinfo.wiremind.io"
+    },
+    "spec": {
+        "conversion": {
+            "strategy": "None"
+        },
+        "group": "wiremind.io",
+        "names": {
+            "kind": "ReleaseInfo",
+            "listKind": "ReleaseInfoList",
+            "plural": "releaseinfo",
+            "shortNames": [
+                "ri"
+            ],
+            "singular": "releaseinfo"
+        },
+        "scope": "Namespaced",
+        "versions": [
+            {
+                "name": "v1",
+                "schema": {
+                    "openAPIV3Schema": {
+                        "properties": {
+                            "spec": {
+                                "type": "object",
+                                "x-kubernetes-preserve-unknown-fields": true
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "served": true,
+                "storage": true
+            }
+        ]
+    },
+    "status": {
+        "acceptedNames": {
+            "kind": "",
+            "plural": ""
+        },
+        "conditions": [],
+        "storedVersions": [
+            "v1"
+        ]
+    }
+}
