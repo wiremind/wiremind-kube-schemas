@@ -3,4 +3,4 @@ Extra schemas to validate some CRDs used by Wiremind.
 
 ## Generate schemas
 
-./build.sh path/to/crds
+Use <https://github.com/datreeio/CRDs-catalog#crd-extractor>
