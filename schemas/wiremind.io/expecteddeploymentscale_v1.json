@@ -1,0 +1,28 @@
+{
+  "properties": {
+    "spec": {
+      "allOf": [
+        {
+          "required": [
+            "deploymentName",
+            "expectedScale"
+          ]
+        }
+      ],
+      "properties": {
+        "deploymentName": {
+          "type": "string"
+        },
+        "expectedScale": {
+          "type": "integer"
+        },
+        "priority": {
+          "type": "integer"
+        }
+      },
+      "type": "object",
+      "additionalProperties": false
+    }
+  },
+  "type": "object"
+}
