@@ -603,6 +603,9 @@
             },
             "standby_port": {
               "type": "string"
+            },
+            "standby_primary_slot_name": {
+              "type": "string"
             }
           },
           "oneOf": [
